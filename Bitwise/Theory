@@ -1,0 +1,20 @@
+// Using not operator
+// int x=0;
+// cout<< ~x;
+
+// o/p is -1 because the msb is 1 
+// To get the mag we need to use 2's complment i.e. 1's complement+1
+
+
+// Left shift means multiplying by a factor of 2 
+// Right shift means dividing by a factor of 2
+
+//1<<i Masking (For ist 3 cases)
+// For setting bit we need to do left shift then use or gate
+// For clearing bit we need to implement  not of left mask then use and gate
+// For getting ith bit we need to  implement mask , then use and get if the o/p is > 0 the bit is 1 else bit is 0
+// For updating ith bit we need to clear the bit in the required position then use mask as the value(0 or 1)to be updated
+// using the same left shift method and then use or gate. clearbit(n,i)---->(value<<i)and use | gate
+// For clearing last i bits we need to use (-1<<i) and use & gate.
+// For clearing a range of bits we need to find the range j and i
+// now a= -1<<(j+1)  and   b= (1<<i)-1   mask =a|b    n=n&mask
